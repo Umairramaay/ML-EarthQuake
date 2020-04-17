@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=, maximum-scale=1, userscalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{{title}} - Quakes</title>
+    <meta name="description" content="EBISYS - Quakes">
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'app/bootstrap/dist/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'app/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'app/Ionicons/css/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'app/admin/css/AdminLTE.min.css'%}">
+    <link rel="stylesheet" href="{% static 'app/admin/css/skins/_all-skins.min.css'%}">
+    <link rel="stylesheet" href="{% static 'app/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css'%}">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+        <header class="main-header">
+
+            <a href="localhost:8000" class="logo">
+                <span class="logo-mini"><b>E</b>F</span>
+                <span class="logo-lg"><b>Earthquake</b>Forecast</span>
+            </a>
+
+            <nav class="navabr navbar-static-top">
+                <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+            </nav>
+        </header>
+
+        <aside class="main-sidebar">
+            <section class="sidebar">
+                <ul class="side-menu" data-widget="tree">
+                    <li class="header">MAPS NAVIGATION</li>
+                    <li class="treeview active">
+                        <a href="#">
+                            <i class="fa fa-globe"></i><span>Maps</span>
+                            <span class="pull-right-container">
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </span>
+                        </a>
+                        <ul class="treeview-menu">
+                            <li>
+                                <a href="localhost:8000"><i class="fa fa-map"></i>Earthquakes (1965 - 2016)</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+
+        <div class="content-wrapper">
+            <section class="content">
+
+                {% block content %}
+
+                {% endblock  %}
+
+            </section>
+        </div>
+    </div>
+    <!-- end wrapper -->
+    <script src="{% static 'app/jquery/dist/jquery.min.js'%}"></script>
+    <script src="{% static 'app/jquery-ui/jquery-ui.min.js'%}"></script>
+
+    <script>
+        $.widget.bridge('uibutton', $.ui.button);
+    </script>
+    <script src="{% static 'app/bootstrap/dist/js/bootstrap.min.js'%}"></script>
+    <script src="{% static 'app/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js'%}"></script>
+    <script src="{% static 'app/jquery-slimscroll/jquery.slimscroll.min.js'%}"></script>
+    <script src="{% static 'app/fastclick/lib/fastclick.js'%}"></script>
+    <script src="{% static 'app/dist/js/adminlte.min.js'%}"></script>
+    <script src="{% static 'app/dist/js/pages/dashboard.js'%}"></script>
+    <script src="{% static 'app/dist/js/demo.js'%}"></script>
+
+
+    {% block scripts %}{% endblock %}
+
+
+</body>
+
+</html>
